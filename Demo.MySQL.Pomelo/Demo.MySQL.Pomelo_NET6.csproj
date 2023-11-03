@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.Base\Demo.Base_NET6.csproj" />
-   <ProjectReference Include="..\Zack.EFCore.Batch.MySQL.Pomelo\Zack.EFCore.Batch.MySQL.Pomelo_NET6.csproj" />
+   <ProjectReference Include="..\Adens.EFCore.BatchExtensions.MySQL.Pomelo\Adens.EFCore.BatchExtensions.MySQL.Pomelo_NET6.csproj" />
   </ItemGroup>
 
 </Project>

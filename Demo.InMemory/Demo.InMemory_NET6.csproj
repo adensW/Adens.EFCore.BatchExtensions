@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Zack.EFCore.Batch.InMemory\Zack.EFCore.Batch.InMemory_NET6.csproj" />
+    <ProjectReference Include="..\Adens.EFCore.BatchExtensions.InMemory\Adens.EFCore.BatchExtensions.InMemory_NET6.csproj" />
   </ItemGroup>
 
 </Project>

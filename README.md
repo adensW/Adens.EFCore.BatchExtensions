@@ -1,7 +1,20 @@
-# [.NET 7 and above users, please check this](https://github.com/yangzhongke/Zack.EFCore.Batch/blob/main/README_NET7.md)  
+# [.NET 7 and above users, please check this](https://github.com/adensW/Adens.EFCore.BatchExtensions/blob/main/README_NET7.md)  
 
-# Zack.EFCore.Batch
-[中文文档 Chinese version](https://github.com/yangzhongke/Zack.EFCore.Batch/blob/main/README_CN.md)  
+Folked from [Zack.EFCore.Batch](https://github.com/yangzhongke/Zack.EFCore.Batch)
+
+the original project has some dependency bug, so I forked it and add some new features:
+
+features:
+
+1. Add DbSet BulkInsert\[Async\] extension method
+2. Remove Dm(达梦) support. the original project has some dependency bug, so I remove it.
+
+others:
+
+rename project namespace to Adens.EFCore.BatchExtensions
+
+# Adens.EFCore.BatchExtensions
+[中文文档 Chinese version](https://github.com/adensW/Adens.EFCore.BatchExtensions/blob/main/README_CN.md)  
 
  Using this library, Entity Framework Core users can delete or update multiple records from a LINQ Query in a SQL statement without loading entities.
  This libary supports Entity Framework Core 5.0 and Entity Framework Core 6.0.  
@@ -11,22 +24,22 @@
  ##### Step 1 
 As for.NET 5 users:
 ```
-SQLServer: Install-Package Zack.EFCore.Batch.MSSQL
-MySQL: Install-Package Zack.EFCore.Batch.MySQL.Pomelo
-Postgresql: Install-Package Zack.EFCore.Batch.Npgsql
-Sqlite: Install-Package Zack.EFCore.Batch.Sqlite
-Oracle:Install-Package Zack.EFCore.Batch.Oracle
+SQLServer: Install-Package Adens.EFCore.BatchExtensions.MSSQL
+MySQL: Install-Package Adens.EFCore.BatchExtensions.MySQL.Pomelo
+Postgresql: Install-Package Adens.EFCore.BatchExtensions.Npgsql
+Sqlite: Install-Package Adens.EFCore.BatchExtensions.Sqlite
+Oracle:Install-Package Adens.EFCore.BatchExtensions.Oracle
 Dm(达梦): Install-Package ZackEFCore.Batch.Dm
-In Memory：Install-Package Zack.EFCore.Batch.InMemory
+In Memory：Install-Package Adens.EFCore.BatchExtensions.InMemory
 ``` 
 As For.NET 6 users:
 ```
-SQLServer: Install-Package Zack.EFCore.Batch.MSSQL_NET6
-MySQL: Install-Package Zack.EFCore.Batch.MySQL.Pomelo_NET6
-Postgresql: Install-Package Zack.EFCore.Batch.Npgsql_NET6
-Sqlite: Install-Package Zack.EFCore.Batch.Sqlite_NET6
-Oracle: Install-Package Zack.EFCore.Batch.Oracle_NET6
-In Memory：Install-Package Zack.EFCore.Batch.InMemory_NET6
+SQLServer: Install-Package Adens.EFCore.BatchExtensions.MSSQL_NET6
+MySQL: Install-Package Adens.EFCore.BatchExtensions.MySQL.Pomelo_NET6
+Postgresql: Install-Package Adens.EFCore.BatchExtensions.Npgsql_NET6
+Sqlite: Install-Package Adens.EFCore.BatchExtensions.Sqlite_NET6
+Oracle: Install-Package Adens.EFCore.BatchExtensions.Oracle_NET6
+In Memory：Install-Package Adens.EFCore.BatchExtensions.InMemory_NET6
 ```
 Support of MySQL is based on Pomelo.EntityFrameworkCore.MySql.
 
@@ -133,7 +146,7 @@ On mysql, to use BulkInsert, please enable local_infile on server side and clien
 ## Misc
 This library utilizes the EF Core to translate the lambda expression to SQL statement, so it supports nearly all the lambda expressions which EF Core supports.
 
-The following databases have been tested that they can work well with Zack.EFCore.Batch: MS SQLServer(Microsoft.EntityFrameworkCore.SqlServer), MySQL(Pomelo.EntityFrameworkCore.MySql), PostgreSQL(Npgsql.EntityFrameworkCore.PostgreSQL), Oracle(Oracle.EntityFrameworkCore). 
+The following databases have been tested that they can work well with Adens.EFCore.BatchExtensions: MS SQLServer(Microsoft.EntityFrameworkCore.SqlServer), MySQL(Pomelo.EntityFrameworkCore.MySql), PostgreSQL(Npgsql.EntityFrameworkCore.PostgreSQL), Oracle(Oracle.EntityFrameworkCore). 
 In theory, as long as a database has its EF Core 5/6 Provider , the database can be supported by this library. If you are using a database that is not currently supported, please submit an issue. I can usually complete the development within one working day.
 
 [Report of this library](https://www.reddit.com/r/dotnetcore/comments/k1esra/how_to_batch_delete_or_update_in_entity_framework/)  

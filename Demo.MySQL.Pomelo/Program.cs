@@ -11,7 +11,7 @@ namespace Demo
     {
         static async Task Main(string[] args)
         {
-            string connStr = "server=localhost;user=root;password=root;database=zackbatch;AllowLoadLocalInfile=true";
+            string connStr = "server=localhost;user=root;password=root;database=Adensbatch;AllowLoadLocalInfile=true";
             ServiceCollection services = new ServiceCollection();
             services.AddDbContext<TestDbContext>();
             using (var sp = services.BuildServiceProvider())
@@ -67,7 +67,7 @@ namespace Demo
                     .Where(b => b.Id > 3)
                     .ExecuteAsync();
 
-                    title = "zack";
+                    title = "Adens";
                     await ctx.BatchUpdate<Book>()
                         .Set(b => b.Title, b => title)
                         .Where(b => b.Id <= 2)
@@ -103,7 +103,7 @@ namespace Demo
         }
         static async Task Main2(string[] args)
         {
-            string connStr = "server=localhost;user=root;password=root;database=zackbatch;AllowLoadLocalInfile=true";
+            string connStr = "server=localhost;user=root;password=root;database=Adensbatch;AllowLoadLocalInfile=true";
             ServiceCollection services = new ServiceCollection();
             services.AddDbContextPool<PooledTestDbContext>(optionsBuilder =>
             {

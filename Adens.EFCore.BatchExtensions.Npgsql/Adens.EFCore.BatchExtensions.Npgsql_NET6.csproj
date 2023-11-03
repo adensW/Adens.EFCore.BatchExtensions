@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	  <LangVersion>10</LangVersion>
+	  <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <RepositoryUrl>https://github.com/adensW/Adens.EFCore.BatchExtensions</RepositoryUrl>
+	  <PackageProjectUrl>https://github.com/adensW/Adens.EFCore.BatchExtensions</PackageProjectUrl>
+	  <Version>6.1.3</Version>
+    <Authors>Adens</Authors>
+    <Description>A Postgresql-specific version of Adens.EFCore.BatchExtensions.
+Using this library, Entity Framework Core users can delete or update multiple records from a LINQ Query in a SQL statement without loading entities. This libary supports Entity Framework Core 6.x.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="6.0.0" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Adens.EFCore.BatchExtensions\Adens.EFCore.BatchExtensions_NET6.csproj" />
+	</ItemGroup>
+</Project>

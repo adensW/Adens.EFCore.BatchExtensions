@@ -83,13 +83,18 @@ namespace Demo
             ctx.SaveChanges();
             stopwatch.Stop();
             Console.WriteLine(stopwatch.Elapsed);*/
-
-            await ctx.BatchUpdate<Book>()
-            .Set("Title", "Haha")
-            .Set("Price", 3.14)
-            .Set(b => b.PubTime, DateTime.Now)
-            .Where(b => b.Price > 888)
-            .ExecuteAsync();
+            List<Book> books = TestBulkInsert1.BuildBooks();
+            Stopwatch stopwatch = new Stopwatch();
+            stopwatch.Start();
+            ctx.Set<Book>().BulkInsert(books);
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.Elapsed);
+            //await ctx.BatchUpdate<Book>()
+            //.Set("Title", "Haha")
+            //.Set("Price", 3.14)
+            //.Set(b => b.PubTime, DateTime.Now)
+            //.Where(b => b.Price > 888)
+            //.ExecuteAsync();
         }
     }
 }

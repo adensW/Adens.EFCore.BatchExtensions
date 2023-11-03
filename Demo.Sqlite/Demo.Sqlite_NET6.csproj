@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.Base\Demo.Base_NET6.csproj" />
-    <ProjectReference Include="..\Zack.EFCore.Batch.Sqlite\Zack.EFCore.Batch.Sqlite_NET6.csproj" />
+    <ProjectReference Include="..\Adens.EFCore.BatchExtensions.Sqlite\Adens.EFCore.BatchExtensions.Sqlite_NET6.csproj" />
   </ItemGroup>
 
   <ItemGroup>

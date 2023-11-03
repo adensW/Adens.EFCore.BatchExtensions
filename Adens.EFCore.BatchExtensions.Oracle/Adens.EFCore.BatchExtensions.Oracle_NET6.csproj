@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+	  <LangVersion>10</LangVersion>
+	  <Nullable>enable</Nullable>
+	  <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	  <Version>6.1.4</Version>
+    <Description>
+		A Oracle-specific version of Adens.EFCore.BatchExtensions.
+		Using this library, Entity Framework Core users can delete or update multiple records from a LINQ Query in a SQL statement without loading entities. This libary supports Entity Framework Core 6.x.
+	</Description>
+    <Authors>Adens yang</Authors>
+    <PackageProjectUrl>https://github.com/adensW/Adens.EFCore.BatchExtensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/adensW/Adens.EFCore.BatchExtensions</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Oracle.EntityFrameworkCore" Version="6.21.4" />
+  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\Adens.EFCore.BatchExtensions\Adens.EFCore.BatchExtensions_NET6.csproj" />
+	</ItemGroup>
+</Project>

@@ -17,7 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.Base\Demo.Base_NET6.csproj" />
-    <ProjectReference Include="..\Zack.EFCore.Batch.Npgsql\Zack.EFCore.Batch.Npgsql_NET6.csproj" />
+    <ProjectReference Include="..\Adens.EFCore.BatchExtensions.Npgsql\Adens.EFCore.BatchExtensions.Npgsql_NET6.csproj" />
   </ItemGroup>
 
 </Project>

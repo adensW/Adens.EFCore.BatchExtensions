@@ -5,7 +5,7 @@
         public static List<Book> BuildBooks()
         {
             List<Book> books = new List<Book>();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 Book b = new Book { AuthorName = "abc" + i, 
                     Price = new Random().Next(), 
@@ -19,7 +19,7 @@
         public static List<Author> BuildAuthors()
         {
             List<Author> authors = new List<Author>();
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 100000; i++)
             {
                 Author b = new Author {Name="hello"+i };
                 if (i < 10)

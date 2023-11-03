@@ -40,7 +40,7 @@ namespace Demo
                 .Where(b => b.Id > 3)
                 .ExecuteAsync();
 
-                title = "zack";
+                title = "Adens";
                 await ctx.BatchUpdate<Book>()
                     .Set(b => b.Title, b => title)
                     .Where(b => b.Id <= 2)

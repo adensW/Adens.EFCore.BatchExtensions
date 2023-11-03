@@ -19,7 +19,7 @@ namespace Demo.Base
                 .Set(b => b.Title, b => s)
                 .Set(b => b.AuthorName, b => b.Title.Substring(3, 2) + b.AuthorName.ToUpper())
                 .Set(b => b.PubTime, b => DateTime.Now)
-                .Where(b => b.Id > n || b.AuthorName.StartsWith("Zack"))
+                .Where(b => b.Id > n || b.AuthorName.StartsWith("Adens"))
                 .ExecuteAsync();
             var b = await ctx.Books.OrderBy(b => b.PubTime).FirstOrDefaultAsync();
             Console.WriteLine(b);
